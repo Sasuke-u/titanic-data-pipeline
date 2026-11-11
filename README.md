@@ -1,6 +1,6 @@
 # Titanic Data Pipeline
 
-A small end-to-end data engineering project, built while learning Python, PySpark and AWS.
+A small end-to-end data engineering project, built with Python, PySpark and AWS.
 
 ## Pipeline
 
@@ -53,4 +53,5 @@ No AWS keys are stored in this repo. Credentials live in a local AWS CLI profile
 ## Dataset
 
 Public Titanic dataset, used for learning only.
+
 
