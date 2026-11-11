@@ -43,7 +43,8 @@ The cleaned Parquet file is uploaded to s3://YOUR-BUCKET/clean/ and an external 
 ## Status
 
 - Done: S3, PySpark cleaning, Parquet, Athena queries
-- Planned: AWS Glue job and EC2 run
+- Done: Same cleaning script run on an Amazon EC2 server (Amazon Linux 2023, Java 17, PySpark 4.3) using an IAM role, output copied to S3
+- Not done: AWS Glue job (script is in scripts/glue_clean.py, but AWS blocked Glue for the account)
 
 ## Security
 
@@ -52,3 +53,4 @@ No AWS keys are stored in this repo. Credentials live in a local AWS CLI profile
 ## Dataset
 
 Public Titanic dataset, used for learning only.
+
