@@ -1,0 +1,17 @@
+# Local output and data (recreated by the scripts)
+output/
+data/
+
+# Python and Spark junk
+__pycache__/
+*.pyc
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Secrets: never upload these
+.env
+*.pem
+*.key
+.aws/
+credentials
