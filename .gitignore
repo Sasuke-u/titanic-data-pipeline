@@ -15,3 +15,4 @@ derby.log
 *.key
 .aws/
 credentials
+logs/
