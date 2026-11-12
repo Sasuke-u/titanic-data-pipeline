@@ -1,0 +1,28 @@
+name: pipeline-test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test-cleaning:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install libraries
+        run: pip install pyspark pandas pyarrow
+      - name: Download the public Titanic CSV
+        run: |
+          mkdir -p data
+          curl -L -o data/titanic.csv https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv
+      - name: Run cleaning and data quality checks
+        run: python scripts/clean.py
